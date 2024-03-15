@@ -11,6 +11,8 @@ on:
 
   workflow_call:
 
+<?sonar-env>
+
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -32,6 +34,8 @@ jobs:
           distribution: 'corretto'
       - run: chmod +x gradlew
       - run: ./gradlew test
+
+      <?sonar-ci>
 
   format:
     runs-on: ubuntu-latest
